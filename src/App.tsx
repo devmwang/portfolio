@@ -1,15 +1,18 @@
-import logo from './logo.svg'
 import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Michael Wang's Portfolio</p>
-      </header>
-    </div>
-  )
+import Home from './pages/home/home';
+
+const App = () => {
+    return (
+        <div className="App">
+            <header className="AppHeader">
+                
+            </header>
+            <div className='AppContent'>
+                <Home />
+            </div>
+        </div>
+    )
 }
 
-export default App
+export default App;
