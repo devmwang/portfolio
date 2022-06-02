@@ -30,20 +30,20 @@ const HeroLinks = (props: ComponentProps) => {
         
         return (
             <a key={link} href={link} target="_blank" rel="noopener noreferrer">
-            <img src={imgSrc} alt={description} className={styles.linkItem} />
+                <img src={imgSrc} alt={description} className={styles.linkItem} />
             </a>
             )
     })
     
     return (
         <React.Fragment>
-        <div className={styles.linksContainer}>
-        <div className={styles.links}>
-        <div className={isVisible ? styles.visible : styles.hidden}>
-        {listItems}
-        </div>
-        </div>
-        </div>
+            <div className={styles.linksContainer}>
+                <div className={styles.links}>
+                    <div className={isVisible ? styles.visible : styles.hidden}>
+                        {listItems}
+                    </div>
+                </div>
+            </div>
         </React.Fragment>
     )
 }
