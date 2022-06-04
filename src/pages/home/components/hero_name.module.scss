@@ -1,3 +1,5 @@
+@import "@assets/themes/main.scss";
+
 .nameContainer {
     position: relative;
     width: 100%;
@@ -11,6 +13,7 @@
         family: DancingScriptBold;
         size: 120px;
     }
+    color: $white;
 }
 
 .hidden {

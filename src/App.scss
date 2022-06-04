@@ -1,4 +1,11 @@
+@import "@assets/themes/main.scss";
+
 @font-face {
     font-family: 'DancingScriptBold';
     src: url('./assets/fonts/DancingScriptBold.ttf');
+}
+
+.App {
+    min-height: 100vh;
+    background-color: $background;
 }
