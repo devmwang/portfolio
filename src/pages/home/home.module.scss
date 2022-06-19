@@ -1,5 +1,22 @@
 @import "@assets/themes/main.scss";
 
+.sideLinksContainer {
+    position: fixed;
+    width: 2rem;
+    bottom: 0;
+    left: 2rem;
+}
+
+.sideLinks {
+    list-style-type: none;
+}
+
+.sideLinkIconItem {
+    height: 2rem;
+    padding: 0.5rem;
+    opacity: 0.5;
+}
+
 .hero {
     min-height: 50vh;
     display: flex;

@@ -36,7 +36,7 @@ const HeroLinks = (props: ComponentProps) => {
         
         return (
             <div key={link} className={isVisible[index] ? styles.visible : styles.hidden}>
-                <a href={link} target="_blank" rel="noopener noreferrer">
+                <a href={link} target="_blank" rel="noopener noreferrer" aria-label={description} >
                     <img src={imgSrc} alt={description} className={styles.linkItem} />
                 </a>
             </div>

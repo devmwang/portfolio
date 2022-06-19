@@ -15,8 +15,26 @@ const Home = () => {
         { description: "Email", link: "mailto:devmwang@icloud.com", imgSrc: EmailIcon, revealDelay: 1000 }
     ]
 
+    // Link List Items
+    const sideLinkItems = links.map((linkItem, index) => {
+        const { description, link, imgSrc } = linkItem;
+        
+        return (
+            <li key={link} >
+                <a href={link} target="_blank" rel="noopener noreferrer" aria-label={description} >
+                    <img src={imgSrc} alt={description} className={styles.sideLinkIconItem} />
+                </a>
+            </li>
+        )
+    })
+
     return (
         <React.Fragment>
+            <div className={styles.sideLinksContainer} >
+                <ul className={styles.sideLinks} >
+                    {sideLinkItems}
+                </ul>
+            </div>
             <div className={styles.hero}>
                 <div className={styles.heroItems}>
                     <HeroName fullName="Michael Wang" revealDelay={500} />
