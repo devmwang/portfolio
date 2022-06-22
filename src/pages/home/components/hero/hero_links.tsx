@@ -6,11 +6,12 @@ type LinkDetails = {
     description: string;
     link: string;
     iconComponent: any;
-    revealDelay: number;
 }
 
 interface ComponentProps {
     linkList: LinkDetails[];
+    revealDelay: number;
+    inBetweenDelay: number;
 }
 
 const HeroLinks = (props: ComponentProps) => {
@@ -20,13 +21,15 @@ const HeroLinks = (props: ComponentProps) => {
     useEffect(() => {
         // For each link, reveal after specified delay
         for (let i=0; i<props.linkList.length; i++) {
+            const linkRevealDelay = props.revealDelay + (i * props.inBetweenDelay);
+
             setTimeout(() => {
                 setLinkVisible((currentValues: any) => {
                     return currentValues.map((value: boolean, index: number) => {
                         return index == i ? true : value;
                     })
                 })
-            }, props.linkList[i].revealDelay)
+            }, linkRevealDelay)
         }
     }, []);
     

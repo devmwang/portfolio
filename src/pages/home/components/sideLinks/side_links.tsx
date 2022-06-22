@@ -6,12 +6,11 @@ type LinkDetails = {
     description: string;
     link: string;
     iconComponent: any;
-    revealDelay: number;
 }
 
 interface ComponentProps {
-    linkList: LinkDetails[];
     revealDelay: number;
+    linkList: LinkDetails[];
 }
 
 const SideLinks = (props: ComponentProps) => {
