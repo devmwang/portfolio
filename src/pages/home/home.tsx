@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import styles from "./home.module.scss"
+import styles from "@pages/home/home.module.scss";
 import SideLinks from "@pages/home/components/sideLinks/side_links";
 import HeroBase from "@pages/home/components/hero/hero_base";
 

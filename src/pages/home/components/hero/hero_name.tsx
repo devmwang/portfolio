@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import styles from './hero_name.module.scss';
+import styles from '@pages/home/components/hero/hero_name.module.scss';
 
 interface ComponentProps {
     fullName: string;
