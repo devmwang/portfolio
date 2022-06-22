@@ -11,18 +11,16 @@ type LinkDetails = {
 
 interface ComponentProps {
     linkList: LinkDetails[];
+    revealDelay: number;
 }
 
 const SideLinks = (props: ComponentProps) => {
     const [isSideLinksVisible, setSideLinksVisible] = useState(false);
 
-    // Component Variables
-    const sideLinksRevealDelay = 1000;
-
     // Runs on component mount
     useEffect(() => {
         // Reveal name text after delay
-        const timeout = setTimeout(() => setSideLinksVisible(true), sideLinksRevealDelay);
+        const timeout = setTimeout(() => setSideLinksVisible(true), props.revealDelay);
         return () => clearTimeout(timeout);
     }, []);
 

@@ -15,7 +15,7 @@ const links = [
 const Home = () => {
     return (
         <React.Fragment>
-            <SideLinks linkList={links} />
+            <SideLinks linkList={links} revealDelay={1500} />
             <HeroBase linkList={links} />
         </React.Fragment>
     )
