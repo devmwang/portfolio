@@ -4,7 +4,7 @@
     position: fixed;
     width: 2rem;
     bottom: 0;
-    left: 2rem;
+    left: 3rem;
 }
 
 .sideLinks {
@@ -17,6 +17,19 @@
     opacity: 0.5;
 }
 
+sideLinksHidden, .sideLinksVisible {
+    padding: {
+        top: 0.5rem;
+        bottom: 0.5rem;
+    }
+}
+
+sideLinksHidden:last-child, .sideLinksVisible:last-child {
+    padding: {
+        bottom: 1rem;
+    }
+}
+
 .sideLinksHidden {
     opacity: 0;
     transform: translateY(30px);
@@ -24,7 +37,6 @@
 
 .sideLinksVisible {
     opacity: 1;
-    padding: 0.4rem;
     transform: translateY(0);
     transition: opacity 1s ease, transform 1s ease;
 }

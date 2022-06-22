@@ -9,18 +9,28 @@ type LinkDetails = {
 }
 
 interface ComponentProps {
-    revealDelay: number;
     linkList: LinkDetails[];
+    revealDelay: number;
+    inBetweenDelay: number;
 }
 
 const SideLinks = (props: ComponentProps) => {
-    const [isSideLinksVisible, setSideLinksVisible] = useState(false);
+    const [isSideLinksVisible, setSideLinksVisible] = useState(new Array(props.linkList.length).fill(false));
 
     // Runs on component mount
     useEffect(() => {
-        // Reveal name text after delay
-        const timeout = setTimeout(() => setSideLinksVisible(true), props.revealDelay);
-        return () => clearTimeout(timeout);
+        // For each link, reveal after specified delay
+        for (let i=0; i<props.linkList.length; i++) {
+            const linkRevealDelay = props.revealDelay + (i * props.inBetweenDelay);
+
+            setTimeout(() => {
+                setSideLinksVisible((currentValues: any) => {
+                    return currentValues.map((value: boolean, index: number) => {
+                        return index == i ? true : value;
+                    })
+                })
+            }, linkRevealDelay)
+        }
     }, []);
 
     // Link List Items
@@ -31,7 +41,7 @@ const SideLinks = (props: ComponentProps) => {
         const sizedIconComponent = React.cloneElement(iconComponent, { size: 30 });
 
         return (
-            <li key={link} className={isSideLinksVisible ? styles.sideLinksVisible : styles.sideLinksHidden} >
+            <li key={link} className={isSideLinksVisible[index] ? styles.sideLinksVisible : styles.sideLinksHidden} >
                 <a href={link} target="_blank" rel="noopener noreferrer" aria-label={description} className={styles.sideLinkItem} >
                     {sizedIconComponent}
                 </a>
