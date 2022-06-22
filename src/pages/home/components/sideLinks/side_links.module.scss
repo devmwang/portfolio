@@ -1,0 +1,30 @@
+@import "@assets/themes/main.scss";
+
+.sideLinksContainer {
+    position: fixed;
+    width: 2rem;
+    bottom: 0;
+    left: 2rem;
+}
+
+.sideLinks {
+    list-style-type: none;
+}
+
+.sideLinkItem {
+    color: $bright;
+    height: 2rem;
+    opacity: 0.5;
+}
+
+.sideLinksHidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.sideLinksVisible {
+    opacity: 1;
+    padding: 0.4rem;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}

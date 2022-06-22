@@ -8,13 +8,13 @@ interface ComponentProps {
 }
 
 const HeroName = (props: ComponentProps) => {
-    const [isVisible, setVisible] = useState(false);
+    const [isNameVisible, setNameVisible] = useState(false);
 
     // Runs on component mount
     useEffect(() => {
         // Reveal name text after delay
         setTimeout(() => {
-            setVisible(true);
+            setNameVisible(true);
         }, props.revealDelay)
     }, []);
 
@@ -22,7 +22,7 @@ const HeroName = (props: ComponentProps) => {
         <React.Fragment>
             <div className={styles.nameContainer}>
                 <div className={styles.nameText}>
-                    <div className={isVisible ? styles.visible : styles.hidden}>
+                    <div className={isNameVisible ? styles.visible : styles.hidden}>
                         {props.fullName}
                     </div>
                 </div>

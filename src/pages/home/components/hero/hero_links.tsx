@@ -5,7 +5,7 @@ import styles from './hero_links.module.scss';
 type LinkDetails = {
     description: string;
     link: string;
-    imgSrc: any;
+    iconComponent: any;
     revealDelay: number;
 }
 
@@ -14,14 +14,14 @@ interface ComponentProps {
 }
 
 const HeroLinks = (props: ComponentProps) => {
-    const [isVisible, setVisible] = useState(new Array(props.linkList.length).fill(false));
+    const [isLinkVisible, setLinkVisible] = useState(new Array(props.linkList.length).fill(false));
 
     // Runs on component mount
     useEffect(() => {
         // For each link, reveal after specified delay
         for (let i=0; i<props.linkList.length; i++) {
             setTimeout(() => {
-                setVisible((currentValues: any) => {
+                setLinkVisible((currentValues: any) => {
                     return currentValues.map((value: boolean, index: number) => {
                         return index == i ? true : value;
                     })
@@ -32,12 +32,15 @@ const HeroLinks = (props: ComponentProps) => {
     
     // Link List Items
     const listItems = props.linkList.map((linkItem, index) => {
-        const { description, link, imgSrc } = linkItem;
+        const { description, link, iconComponent } = linkItem;
         
+        // Pass size prop to icon component
+        const sizedIconComponent = React.cloneElement(iconComponent, { size: 72 });
+
         return (
-            <div key={link} className={isVisible[index] ? styles.visible : styles.hidden}>
-                <a href={link} target="_blank" rel="noopener noreferrer" aria-label={description} >
-                    <img src={imgSrc} alt={description} className={styles.linkItem} />
+            <div key={link} className={isLinkVisible[index] ? styles.visible : styles.hidden}>
+                <a href={link} target="_blank" rel="noopener noreferrer" aria-label={description} className={styles.linkItem} >
+                    {sizedIconComponent}
                 </a>
             </div>
         )
