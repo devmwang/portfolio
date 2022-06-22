@@ -13,9 +13,7 @@ const HeroName = (props: ComponentProps) => {
     // Runs on component mount
     useEffect(() => {
         // Reveal name text after delay
-        setTimeout(() => {
-            setNameVisible(true);
-        }, props.revealDelay)
+        setTimeout(() => setNameVisible(true), props.revealDelay)
     }, []);
 
     return (
