@@ -13,13 +13,14 @@ type LinkDetails = {
 
 interface ComponentProps {
     linkList: LinkDetails[];
+    heroNameRevealDelay: number;
 }
 
 const HeroBase = (props: ComponentProps) => {
     return (
         <div className={styles.hero}>
             <div className={styles.heroItems}>
-                <HeroName fullName="Michael Wang" revealDelay={500} />
+                <HeroName fullName="Michael Wang" revealDelay={props.heroNameRevealDelay} />
                 <HeroLinks linkList={props.linkList} />
             </div>
         </div>
