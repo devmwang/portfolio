@@ -17,14 +17,14 @@
     opacity: 0.5;
 }
 
-sideLinksHidden, .sideLinksVisible {
+.sideLinksHidden, .sideLinksVisible {
     padding: {
         top: 0.5rem;
         bottom: 0.5rem;
     }
 }
 
-sideLinksHidden:last-child, .sideLinksVisible:last-child {
+.sideLinksHidden:last-child, .sideLinksVisible:last-child {
     padding: {
         bottom: 1rem;
     }
