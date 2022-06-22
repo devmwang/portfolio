@@ -22,7 +22,8 @@ const SideLinks = (props: ComponentProps) => {
     // Runs on component mount
     useEffect(() => {
         // Reveal name text after delay
-        setTimeout(() => setSideLinksVisible(true), sideLinksRevealDelay)
+        const timeout = setTimeout(() => setSideLinksVisible(true), sideLinksRevealDelay);
+        return () => clearTimeout(timeout);
     }, []);
 
     // Link List Items
