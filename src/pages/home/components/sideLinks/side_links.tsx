@@ -38,7 +38,7 @@ const SideLinks = (props: ComponentProps) => {
         const { description, link, iconComponent } = linkItem;
         
         // Pass size prop to icon component
-        const sizedIconComponent = React.cloneElement(iconComponent, { size: 30 });
+        const sizedIconComponent = React.cloneElement(iconComponent, { size: '2rem' });
 
         return (
             <li key={link} className={isSideLinksVisible[index] ? styles.sideLinksVisible : styles.sideLinksHidden} >

@@ -38,7 +38,7 @@ const HeroLinks = (props: ComponentProps) => {
         const { description, link, iconComponent } = linkItem;
         
         // Pass size prop to icon component
-        const sizedIconComponent = React.cloneElement(iconComponent, { size: 72 });
+        const sizedIconComponent = React.cloneElement(iconComponent, { size: '4.5rem' });
 
         return (
             <div key={link} className={isLinkVisible[index] ? styles.visible : styles.hidden}>
