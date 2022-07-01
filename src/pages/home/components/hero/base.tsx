@@ -1,8 +1,6 @@
 import React from "react";
 
-import styles from "@pages/home/components/hero/hero_base.module.scss";
-import HeroName from "@pages/home/components/hero/hero_name";
-import HeroLinks from "@pages/home/components/hero/hero_links";
+import styles from "@pages/home/components/hero/base.module.scss";
 
 interface ComponentProps {
     children: React.ReactNode;

@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import styles from "@pages/home/home.module.scss";
 import SideLinks from "@pages/home/components/sideLinks/side_links";
 
-import HeroBase from "@pages/home/components/hero/hero_base";
-import HeroName from "@pages/home/components/hero/hero_name";
-import HeroLinks from "@pages/home/components/hero/hero_links";
+import HeroBase from "@src/pages/home/components/hero/base";
+import HeroName from "@src/pages/home/components/hero/name";
+import HeroLinks from "@src/pages/home/components/hero/links";
 
 import ProfileBase from "@src/pages/home/components/profile/base";
 import ProfileBackground from "@src/pages/home/components/profile/background";

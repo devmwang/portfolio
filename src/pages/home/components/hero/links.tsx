@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import styles from '@pages/home/components/hero/hero_links.module.scss';
+import styles from '@pages/home/components/hero/links.module.scss';
 
 type LinkDetails = {
     description: string;
