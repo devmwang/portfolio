@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import styles from "@pages/home/home.module.scss";
 import SideLinks from "@pages/home/components/sideLinks/side_links";
+
 import HeroBase from "@pages/home/components/hero/hero_base";
+import HeroName from "@pages/home/components/hero/hero_name";
+import HeroLinks from "@pages/home/components/hero/hero_links";
 
 import ProfileBase from "@src/pages/home/components/profile/base";
 import ProfileBackground from "@src/pages/home/components/profile/background";
@@ -19,7 +22,10 @@ const Home = () => {
     return (
         <React.Fragment>
             <SideLinks linkList={links} revealDelay={1400} inBetweenDelay={100} />
-            <HeroBase fullName="Michael Wang" linkList={links} heroNameRevealDelay={500} heroLinksRevealDelay={800} heroLinksBetweenDelay={150} />
+            <HeroBase>
+                <HeroName fullName="Michael Wang" revealDelay={500} />
+                <HeroLinks linkList={links} revealDelay={800} inBetweenDelay={150} />
+            </HeroBase> 
             <ProfileBase>
                 <ProfileBackground revealDelay={1200} ubcLink="https://www.ubc.ca/" />
             </ProfileBase>
