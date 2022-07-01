@@ -1,0 +1,28 @@
+@import "@assets/themes/main.scss";
+
+.backgroundContainer {
+    max-width: 80vw;
+    padding: 1rem;
+}
+
+.title {
+    display: inline-block;
+    padding: {
+        right: 4rem;
+    }
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.content {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.links {
+    color: $white;
+    font-weight: 600;
+    text-decoration: none;
+}
