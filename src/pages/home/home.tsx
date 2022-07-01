@@ -12,22 +12,36 @@ import ProfileBackground from "@src/pages/home/components/profile/background";
 
 import { GitHub, Mail, Linkedin } from "react-feather";
 
+// Static Data
+const fullName = "Michael Wang"
+
 const links = [
     { description: "GitHub", link: "https://github.com/devmwang/", iconComponent: <GitHub /> },
     { description: "LinkedIn", link: "https://linkedin.com/in/devmwang/", iconComponent: <Linkedin /> },
     { description: "Email", link: "mailto:devmwang@icloud.com", iconComponent: <Mail /> }
 ]
 
+const baseDelay = 500
+const inBetweenDelay = 150
+
+const ubcLink = "https://www.ubc.ca/"
+
 const Home = () => {
+    // Automatic animation delay calculation
+    const heroNameDelay = baseDelay
+    const heroLinksDelay = baseDelay + 300
+    const sideLinksDelay = heroLinksDelay + ((links.length - 1) * inBetweenDelay) + 200
+    const profileDelay = sideLinksDelay + ((links.length - 1) * inBetweenDelay) + 200
+
     return (
         <React.Fragment>
-            <SideLinks linkList={links} revealDelay={1400} inBetweenDelay={100} />
+            <SideLinks linkList={links} revealDelay={sideLinksDelay} inBetweenDelay={inBetweenDelay} />
             <HeroBase>
-                <HeroName fullName="Michael Wang" revealDelay={500} />
-                <HeroLinks linkList={links} revealDelay={800} inBetweenDelay={150} />
+                <HeroName fullName={fullName} revealDelay={heroNameDelay} />
+                <HeroLinks linkList={links} revealDelay={heroLinksDelay} inBetweenDelay={inBetweenDelay} />
             </HeroBase> 
             <ProfileBase>
-                <ProfileBackground revealDelay={1200} ubcLink="https://www.ubc.ca/" />
+                <ProfileBackground revealDelay={profileDelay} ubcLink={ubcLink} />
             </ProfileBase>
         </React.Fragment>
     )

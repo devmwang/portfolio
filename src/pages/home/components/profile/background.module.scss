@@ -1,5 +1,16 @@
 @import "@assets/themes/main.scss";
 
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
 .backgroundContainer {
     max-width: 80vw;
     padding: 1rem;
