@@ -25,6 +25,7 @@ const baseDelay = 500
 const inBetweenDelay = 150
 
 const ubcLink = "https://www.ubc.ca/"
+const sauderLink = "https://www.sauder.ubc.ca/"
 
 const Home = () => {
     // Automatic animation delay calculation
@@ -41,7 +42,7 @@ const Home = () => {
                 <HeroLinks linkList={links} revealDelay={heroLinksDelay} inBetweenDelay={inBetweenDelay} />
             </HeroBase> 
             <ProfileBase>
-                <ProfileBackground revealDelay={profileDelay} ubcLink={ubcLink} />
+                <ProfileBackground revealDelay={profileDelay} ubcLink={ubcLink} sauderLink={sauderLink} />
             </ProfileBase>
         </React.Fragment>
     )

@@ -17,6 +17,7 @@
 }
 
 .title {
+    vertical-align: top;
     display: inline-block;
     padding: {
         right: 4rem;
@@ -26,10 +27,18 @@
 }
 
 .content {
+    max-width: 60vw;
     display: inline-block;
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.4;
+}
+
+.content p{
+    margin: 0;
+    padding: {
+        bottom: 1.2rem;
+    }
 }
 
 .links {

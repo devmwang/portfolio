@@ -5,6 +5,7 @@ import styles from "@pages/home/components/profile/background.module.scss"
 interface ComponentProps {
     revealDelay: number;
     ubcLink: string;
+    sauderLink: string;
 }
 
 const ProfileBackground = (props: ComponentProps) => {
@@ -24,7 +25,8 @@ const ProfileBackground = (props: ComponentProps) => {
                     Background
                 </div>
                 <div className={styles.content}>
-                    <p>I'm currently a student at the <a href={props.ubcLink} target="_blank" rel="noopener noreferrer" className={styles.links}>University of British Columbia</a> pursuing a Bachelor of Computer Science and Masters of Management.</p>
+                    <p>I'm currently a student at the <a href={props.ubcLink} target="_blank" rel="noopener noreferrer" className={styles.links}>University of British Columbia</a> and <a href={props.sauderLink} target="_blank" rel="noopener noreferrer" className={styles.links}>UBC's Sauder School of Business</a>, pursuing a Bachelor of Computer Science and a Masters of Management.</p>
+                    <p>I enjoy learning new technologies and growing my knowledge on modern frameworks and platforms. This knowledge has been woven throughout the many programs I've created in the past, ranging from interactive web and mobile apps, to native desktop software, and even cutting-edge virtual reality experiences.</p>
                 </div>
             </section>
         </div>
