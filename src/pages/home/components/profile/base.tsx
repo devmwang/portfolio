@@ -8,8 +8,10 @@ interface ComponentProps {
 
 const ProfileBase = ({ children }: ComponentProps) => {
     return (
-        <div className={styles.profile}>
-            {children}
+        <div className={styles.profileContainer}>
+            <div className={styles.profile}>
+                {children}
+            </div>
         </div>
     )
 }

@@ -1,6 +1,10 @@
 @import "@assets/themes/main.scss";
 
-.profile {
+.profileContainer {
     display: flex;
     justify-content: center;
+}
+
+.profile {
+    display: block;
 }
