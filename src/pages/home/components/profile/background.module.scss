@@ -13,7 +13,9 @@
 
 .backgroundContainer {
     max-width: 80vw;
-    padding: 1rem;
+    padding: {
+        bottom: 3rem;
+    }
 }
 
 .title {
