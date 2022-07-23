@@ -25,7 +25,7 @@ const ProfileBackground = (props: ComponentProps) => {
                     Background
                 </div>
                 <div className={styles.content}>
-                    <p>I'm currently a student at the <a href={props.ubcLink} target="_blank" rel="noopener noreferrer" className={styles.links}>University of British Columbia</a> and <a href={props.sauderLink} target="_blank" rel="noopener noreferrer" className={styles.links}>Sauder School of Business</a>, pursuing a Bachelor of Computer Science and a Masters of Management.</p>
+                    <p>I'm currently a student at the <a href={props.ubcLink} target="_blank" rel="noopener noreferrer" className={styles.links}>University of British Columbia</a> and <a href={props.sauderLink} target="_blank" rel="noopener noreferrer" className={styles.links}>Sauder School of Business</a>, pursuing a Bachelor of Computer Science and a Master of Management.</p>
                     <p>I enjoy learning new technologies and growing my knowledge on modern frameworks. My experience creating programs spans a wide variety of platforms, ranging from interactive web and mobile apps, to native desktop software, and cutting-edge virtual reality experiences.</p>
                 </div>
             </section>
