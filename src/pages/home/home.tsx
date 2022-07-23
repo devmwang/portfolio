@@ -29,11 +29,12 @@ const ubcLink = "https://www.ubc.ca/";
 const sauderLink = "https://www.sauder.ubc.ca/";
 
 const skillsLanguages = [
+  "Python",
   "TypeScript",
   "JavaScript",
   "C#",
-  "Python",
   "Java",
+  "swift",
   "HTML",
   "CSS/Sass",
 ];
@@ -42,13 +43,14 @@ const skillsFrameworks = [
     "Next.js",
     "React",
     "Angular",
-    "Prisma",
     "Node.js",
-    "Express",
+    "Prisma",
+    "SwiftUI",
 ];
 
 const skillsTools = [
     "Git/GitHub",
+    "Vite",
     "Chrome DevTools",
     "Figma",
     "Gradle",
