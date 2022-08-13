@@ -1,8 +1,8 @@
+![Status](https://flat.badgen.net/badge/Status/DEPRECATED/red)
+
 # Portfolio
 
 This repository contains the source for Michael Wang's GitHub Pages Site.
-
-[![Auto Deployment to Production](https://github.com/devmwang/portfolio/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/devmwang/portfolio/actions/workflows/main.yml)
 
 ## Frameworks/Libraries
 
