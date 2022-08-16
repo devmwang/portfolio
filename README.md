@@ -1,5 +1,8 @@
 ![Status](https://flat.badgen.net/badge/Status/DEPRECATED/red)
 
+## Check out my current site at [devmwang.com](https://devmwang.com/) (Repo: [github.com/devmwang/personal-site](https://github.com/devmwang/personal-site))
+
+
 # Portfolio
 
 This repository contains the source for Michael Wang's GitHub Pages Site.
